@@ -63,3 +63,61 @@ The **`/user/login`** endpoint authenticates an existing user using their email 
   "password": "strongpassword123"
 }
 ```
+
+---
+
+# /user/profile Endpoint Documentation
+
+## 📘 Description
+The **`/user/profile`** endpoint retrieves the authenticated user's profile.
+
+---
+
+## 📥 Request Data
+
+- No request body required.
+- Requires valid authentication token via header or cookie.
+
+---
+
+## 🚦 Response Status Codes
+
+- **200 OK**: Returns the user profile.
+- **401 Unauthorized**: Authentication failed; token missing or invalid.
+
+---
+
+## 🧪 Example Request
+
+```
+GET /user/profile
+```
+
+---
+
+# /user/logout Endpoint Documentation
+
+## 📘 Description
+The **`/user/logout`** endpoint logs out the authenticated user by clearing the token cookie and blacklisting the token.
+
+---
+
+## 📥 Request Data
+
+- No request body required.
+- Requires valid authentication token via header or cookie.
+
+---
+
+## 🚦 Response Status Codes
+
+- **200 OK**: Successfully logged out.
+- **401 Unauthorized**: Authentication failed; token missing or invalid.
+
+---
+
+## 🧪 Example Request
+
+```
+GET /user/logout
+```
